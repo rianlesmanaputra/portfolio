@@ -23,7 +23,7 @@ function About() {
           viewport={{ once: true }}
           className="backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-8 md:p-10 shadow-xl"
         >
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed text-center">
+          <p className="text-gray-300 text-base md:text-lg leading-relaxed md:leading-loose text-center max-w-3xl mx-auto">
             Saya adalah seorang{" "}
             <span className="text-cyan-400 font-medium">
               Fullstack Web Developer
