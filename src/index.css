@@ -2,29 +2,234 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth Scroll */
+/* ========================================================
+   CSS VARIABLES
+   ======================================================== */
+:root {
+  --color-bg: #020617;
+  --color-surface: rgba(255, 255, 255, 0.04);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-accent: #22d3ee;
+  --color-accent-glow: rgba(34, 211, 238, 0.3);
+  --color-accent2: #818cf8;
+  --color-accent2-glow: rgba(129, 140, 248, 0.3);
+  --font-primary: 'Outfit', sans-serif;
+  --font-mono: 'Space Grotesk', sans-serif;
+}
+
+/* ========================================================
+   BASE
+   ======================================================== */
 html {
   scroll-behavior: smooth;
 }
 
-/* Global Styling */
 body {
-  @apply bg-gray-950 text-white antialiased;
-  font-family: "Inter", sans-serif;
-  background-image: radial-gradient(
-      circle at top right,
-      rgba(56, 189, 248, 0.15),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at bottom left,
-      rgba(99, 102, 241, 0.1),
-      transparent 40%
-    );
+  @apply text-white antialiased;
+  font-family: var(--font-primary);
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(34, 211, 238, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(129, 140, 248, 0.07) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(2, 6, 23, 1) 0%, transparent 100%);
+  background-attachment: fixed;
 }
 
-/* Optional: Selection Color */
+/* ========================================================
+   CUSTOM SCROLLBAR
+   ======================================================== */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(34, 211, 238, 0.4);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 211, 238, 0.7);
+}
+
+/* ========================================================
+   SELECTION
+   ======================================================== */
 ::selection {
-  background-color: rgba(56, 189, 248, 0.4);
+  background-color: rgba(34, 211, 238, 0.3);
   color: white;
+}
+
+/* ========================================================
+   GLASSMORPHISM UTILITIES
+   ======================================================== */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-hover {
+  transition: all 0.3s ease;
+}
+
+.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(34, 211, 238, 0.25);
+  box-shadow: 0 8px 40px rgba(34, 211, 238, 0.08);
+}
+
+/* ========================================================
+   GRADIENT BORDER
+   ======================================================== */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.5), rgba(129, 140, 248, 0.3), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ========================================================
+   GLOW EFFECTS
+   ======================================================== */
+.glow-cyan {
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.25), 0 0 60px rgba(34, 211, 238, 0.1);
+}
+
+.text-glow {
+  text-shadow: 0 0 30px rgba(34, 211, 238, 0.5);
+}
+
+/* ========================================================
+   ANIMATED GRID BACKGROUND
+   ======================================================== */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(34, 211, 238, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ========================================================
+   SECTION HEADING
+   ======================================================== */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+.section-label::before,
+.section-label::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--color-accent);
+  opacity: 0.5;
+}
+
+/* ========================================================
+   TECH BADGE
+   ======================================================== */
+.tech-badge {
+  @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium;
+  background: rgba(34, 211, 238, 0.08);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  color: #94e8f5;
+  font-family: var(--font-mono);
+}
+
+/* ========================================================
+   BUTTON VARIANTS
+   ======================================================== */
+.btn-primary {
+  @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold transition-all duration-300;
+  background: linear-gradient(135deg, #22d3ee, #06b6d4);
+  color: #020617;
+  box-shadow: 0 4px 20px rgba(34, 211, 238, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(34, 211, 238, 0.45);
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold transition-all duration-300;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(34, 211, 238, 0.5);
+  color: #22d3ee;
+  transform: translateY(-2px);
+  background: rgba(34, 211, 238, 0.05);
+}
+
+/* ========================================================
+   ANIMATIONS
+   ======================================================== */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.05) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 4s ease infinite;
 }

@@ -1,47 +1,42 @@
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Certificates from "./components/Certificates";
+import Footer from "./components/Footer";
 import Loader from "./components/Loader";
-import Particles from "./components/Particles";
+
+const About = lazy(() => import("./components/About"));
+const Skills = lazy(() => import("./components/Skills"));
+const Projects = lazy(() => import("./components/Projects"));
+const Certificates = lazy(() => import("./components/Certificates"));
+const Contact = lazy(() => import("./components/Contact"));
 
 function App() {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000); // durasi loading
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <AnimatePresence>
-      {loading ? (
-        <Loader key="loader" />
-      ) : (
+    <>
+      <AnimatePresence mode="wait">
+        {loading && (
+          <Loader key="loader" onComplete={() => setLoading(false)} />
+        )}
+      </AnimatePresence>
+
+      {!loading && (
         <>
-          {/* Background */}
-          <Particles />
-
-          {/* Navigation */}
           <Navbar />
-
-          {/* Main Sections */}
           <Hero />
-          <About />
-          <Skills />
-          <Projects />
-          <Certificates />
+          <Suspense fallback={<div className="h-32" />}>
+            <About />
+            <Skills />
+            <Projects />
+            <Certificates />
+            <Contact />
+          </Suspense>
+          <Footer />
         </>
       )}
-    </AnimatePresence>
+    </>
   );
 }
 
