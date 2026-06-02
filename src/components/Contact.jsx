@@ -12,21 +12,21 @@ const contactInfo = [
   {
     icon: HiMail,
     label: "Email",
-    value: "rian@example.com",
-    href: "mailto:rian@example.com",
+    value: "rianlesmanaputra80@gmail.com",
+    href: "mailto:rianlesmanaputra80@gmail.com",
     color: "#22d3ee",
   },
   {
     icon: FaWhatsapp,
     label: "WhatsApp",
-    value: "+62 812 3456 7890",
-    href: "https://wa.me/",
+    value: "0822-6813-1855",
+    href: "https://wa.me/6282268131855",
     color: "#25D366",
   },
   {
     icon: HiLocationMarker,
     label: "Lokasi",
-    value: "Indonesia",
+    value: "Pekanbaru, Riau",
     href: "#",
     color: "#818cf8",
   },
@@ -133,7 +133,7 @@ export default function Contact() {
               {[
                 { icon: FaGithub, href: "https://github.com/", label: "GitHub" },
                 { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
-                { icon: FaWhatsapp, href: "https://wa.me/", label: "WhatsApp" },
+                { icon: FaWhatsapp, href: "https://wa.me/6282268131855", label: "WhatsApp" },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
