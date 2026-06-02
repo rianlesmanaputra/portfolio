@@ -12,7 +12,7 @@ import {
   SiTailwindcss,
   SiBootstrap,
   SiVite,
-  SiMicrosoftword,
+  SiMicrosoftWord,
 } from "react-icons/si";
 
 const categories = [
@@ -41,7 +41,7 @@ const categories = [
       { name: "Git", icon: SiGit, color: "#F05032", level: 80 },
       { name: "GitHub", icon: SiGithub, color: "#ffffff", level: 80 },
       { name: "Vite", icon: SiVite, color: "#646CFF", level: 78 },
-      { name: "MS Word", icon: SiMicrosoftword, color: "#2B579A", level: 88 },
+      { name: "MS Word", icon: SiMicrosoftWord, color: "#2B579A", level: 88 },
     ],
   },
 ];
