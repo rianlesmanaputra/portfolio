@@ -109,7 +109,7 @@ export default function Hero() {
             >
               <div className="h-px w-8 bg-cyan-400/50" />
               <p className="text-lg md:text-xl text-gray-300 font-medium">
-                Junior Web Developer | IT Specialist
+                 Web Developer | IT Specialist
               </p>
             </motion.div>
 
