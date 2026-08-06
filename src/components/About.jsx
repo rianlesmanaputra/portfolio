@@ -4,18 +4,18 @@ import { HiDownload, HiCode, HiLightBulb, HiUserGroup } from "react-icons/hi";
 const highlights = [
   {
     icon: HiCode,
-    title: "Clean Code",
-    desc: "Menulis kode yang bersih, terstruktur, dan mudah dipelihara.",
+    title: "Problem Solver",
+    desc: "Mampu memecahkan masalah teknis dengan pemikiran kritis.",
   },
   {
     icon: HiLightBulb,
-    title: "Problem Solver",
-    desc: "Mengubah masalah kompleks menjadi solusi digital yang elegan.",
+    title: "IT Support",
+    desc: "Berpengalaman dalam dokumentasi teknis dan pemeliharaan sistem.",
   },
   {
     icon: HiUserGroup,
     title: "Team Player",
-    desc: "Berpengalaman berkolaborasi dalam tim lintas fungsi.",
+    desc: "Komunikasi efektif dalam tim untuk manajemen proyek dan waktu.",
   },
 ];
 
@@ -23,7 +23,7 @@ export default function About() {
   return (
     <section id="about" className="relative py-28 px-6 overflow-hidden">
       {/* DECORATIVE */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none" />
+
 
       <div className="max-w-6xl mx-auto">
         {/* LABEL */}
@@ -64,9 +64,9 @@ export default function About() {
             {/* Photo container */}
             <div className="gradient-border rounded-2xl overflow-hidden mb-6">
               <div className="glass p-8 rounded-2xl">
-                <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden mb-6 ring-2 ring-cyan-400/30">
+                <div className="w-32 h-40 mx-auto rounded-2xl overflow-hidden mb-6 ring-2 ring-cyan-400/30">
                   <img
-                    src="/tes-removebg-preview.png"
+                    src={`${import.meta.env.BASE_URL}tes-removebg-preview.png`}
                     alt="Rian Lesmana Putra"
                     className="w-full h-full object-cover"
                   />
@@ -77,14 +77,14 @@ export default function About() {
                     Rian Lesmana Putra
                   </h3>
                   <p className="text-cyan-400 text-sm font-medium">
-                    Fullstack Web Developer
+                    Junior Web Developer | IT Specialist
                   </p>
                 </div>
 
                 {/* Info list */}
                 <div className="space-y-3 text-sm">
                   {[
-                    ["📍 Lokasi", "Indonesia"],
+                    ["📍 Lokasi", "Rokan Hulu, Riau"],
                     ["💼 Tersedia", "Remote & Onsite"],
                     ["🗣️ Bahasa", "Indonesia, English"],
                     ["⚡ Spesialisasi", "Laravel, React, MySQL"],
@@ -117,19 +117,13 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
-              Saya adalah seorang{" "}
-              <span className="text-cyan-400 font-semibold">Fullstack Web Developer</span>{" "}
-              yang bersemangat membangun produk digital yang memberikan dampak nyata.
+              Lulusan <span className="text-cyan-400 font-semibold">S1 Sistem Informasi</span> dengan pengalaman dalam pengembangan web dan infrastruktur TI.
             </p>
             <p className="text-gray-400 leading-relaxed mb-4">
-              Berpengalaman dalam{" "}
-              <span className="text-white font-medium">Laravel</span> untuk backend yang kuat dan scalable,
-              serta{" "}
-              <span className="text-white font-medium">React</span> untuk antarmuka yang modern dan responsif.
+              Berpengalaman sebagai <span className="text-white font-medium">Pranata Komputer</span> di Balai Bahasa Provinsi Riau, dengan fokus pada pengembangan platform berbasis <span className="text-white font-medium">Laravel</span>, digitalisasi pelaporan, pengelolaan database, dan konfigurasi server.
             </p>
             <p className="text-gray-400 leading-relaxed mb-10">
-              Dengan pendekatan yang terstruktur dan berorientasi pada solusi, saya terbiasa
-              mengubah kebutuhan yang kompleks menjadi solusi digital yang elegan dan fungsional.
+              Juga memiliki pengalaman dalam IT Support, dokumentasi teknis, serta terampil menggunakan Microsoft Office untuk pengelolaan data.
             </p>
 
             {/* HIGHLIGHT CARDS */}

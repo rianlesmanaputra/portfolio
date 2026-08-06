@@ -61,7 +61,7 @@ export default function Certificates() {
 
   return (
     <section id="certificates" className="relative py-28 px-6 overflow-hidden">
-      <div className="absolute top-0 left-0 w-80 h-80 bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none" />
+
 
       <div className="max-w-6xl mx-auto">
         {/* LABEL */}

@@ -11,10 +11,10 @@ const navLinks = [
 ];
 
 const socials = [
-  { icon: FaGithub, href: "#", label: "GitHub" },
-  { icon: FaLinkedin, href: "#", label: "LinkedIn" },
-  { icon: FaInstagram, href: "#", label: "Instagram" },
-  { icon: FaWhatsapp, href: "#", label: "WhatsApp" },
+  { icon: FaGithub, href: "https://github.com/rianlesmanaputra", label: "GitHub" },
+  { icon: FaLinkedin, href: "https://linkedin.com/in/rian-lesmana-putra", label: "LinkedIn" },
+  { icon: FaInstagram, href: "https://instagram.com/rianlesmana17", label: "Instagram" },
+  { icon: FaWhatsapp, href: "https://wa.me/6282268131855", label: "WhatsApp" },
 ];
 
 export default function Footer() {

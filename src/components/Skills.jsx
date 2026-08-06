@@ -12,8 +12,8 @@ import {
   SiTailwindcss,
   SiBootstrap,
   SiVite,
-  SiMicrosoftWord,
 } from "react-icons/si";
+import { FaFileWord } from "react-icons/fa";
 
 const categories = [
   {
@@ -41,7 +41,7 @@ const categories = [
       { name: "Git", icon: SiGit, color: "#F05032", level: 80 },
       { name: "GitHub", icon: SiGithub, color: "#ffffff", level: 80 },
       { name: "Vite", icon: SiVite, color: "#646CFF", level: 78 },
-      { name: "MS Word", icon: SiMicrosoftWord, color: "#2B579A", level: 88 },
+      { name: "MS Word", icon: FaFileWord, color: "#2B579A", level: 88 },
     ],
   },
 ];
@@ -90,7 +90,7 @@ function SkillCard({ skill, index }) {
 export default function Skills() {
   return (
     <section id="skills" className="relative py-28 px-6 overflow-hidden">
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-cyan-500/5 rounded-full blur-[100px] pointer-events-none" />
+
 
       <div className="max-w-6xl mx-auto">
         {/* LABEL */}

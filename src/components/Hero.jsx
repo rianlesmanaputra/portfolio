@@ -16,22 +16,22 @@ import { HiArrowDown, HiDownload } from "react-icons/hi";
 const socials = [
   {
     icon: FaGithub,
-    href: "https://github.com/",
+    href: "https://github.com/rianlesmanaputra",
     label: "GitHub",
   },
   {
     icon: FaLinkedin,
-    href: "https://linkedin.com/",
+    href: "https://linkedin.com/in/rian-lesmana-putra",
     label: "LinkedIn",
   },
   {
     icon: FaInstagram,
-    href: "https://instagram.com/",
+    href: "https://instagram.com/rianlesmana17",
     label: "Instagram",
   },
   {
     icon: FaWhatsapp,
-    href: "https://wa.me/",
+    href: "https://wa.me/6282268131855",
     label: "WhatsApp",
   },
 ];
@@ -44,9 +44,8 @@ const techBadges = [
 ];
 
 const stats = [
-  { value: "10+", label: "Proyek Selesai" },
+  { value: "4+", label: "Proyek Selesai" },
   { value: "2+", label: "Tahun Pengalaman" },
-  { value: "5+", label: "Klien Puas" },
 ];
 
 export default function Hero() {
@@ -58,9 +57,7 @@ export default function Hero() {
       {/* GRID BACKGROUND */}
       <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
 
-      {/* GLOW ORBS */}
-      <div className="absolute top-20 left-1/4 w-96 h-96 bg-cyan-400/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
+
 
       <div className="max-w-6xl mx-auto w-full">
         <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -112,7 +109,7 @@ export default function Hero() {
             >
               <div className="h-px w-8 bg-cyan-400/50" />
               <p className="text-lg md:text-xl text-gray-300 font-medium">
-                Fullstack Web Developer
+                Junior Web Developer | IT Specialist
               </p>
             </motion.div>
 
@@ -123,10 +120,9 @@ export default function Hero() {
               transition={{ delay: 0.55 }}
               className="text-gray-400 max-w-xl leading-relaxed mb-10 mx-auto md:mx-0"
             >
-              Saya membangun aplikasi web modern yang rapi, efisien, dan mudah
-              digunakan. Fokus pada{" "}
-              <span className="text-cyan-400">performa tinggi</span> dan{" "}
-              <span className="text-cyan-400">pengalaman pengguna terbaik</span>.
+              Lulusan S1 Sistem Informasi dengan pengalaman pengembangan web dan infrastruktur TI. Fokus pada{" "}
+              <span className="text-cyan-400">pengembangan Laravel</span> dan{" "}
+              <span className="text-cyan-400">digitalisasi sistem</span>.
             </motion.p>
 
             {/* BUTTONS */}
@@ -192,7 +188,7 @@ export default function Hero() {
             <div className="relative z-10 mt-8 md:mt-0">
               <div className="p-[2px] rounded-[32px] bg-gradient-to-br from-cyan-400/70 via-indigo-400/40 to-transparent">
                 <div
-                  className="w-64 h-64 md:w-80 md:h-80 rounded-[30px] glass relative overflow-hidden"
+                  className="w-64 h-80 md:w-72 md:h-[22rem] rounded-[30px] glass relative overflow-hidden"
                 >
                   {/* Inner decoration */}
                   <div className="absolute inset-4 rounded-[22px] border border-cyan-400/15" />
@@ -202,11 +198,11 @@ export default function Hero() {
 
               {/* PHOTO */}
               <motion.img
-                src="/tes-removebg-preview.png"
+                src={`${import.meta.env.BASE_URL}tes-removebg-preview.png`}
                 alt="Rian Lesmana Putra"
                 loading="eager"
                 decoding="async"
-                className="absolute w-64 h-64 md:w-80 md:h-80 object-cover rounded-[30px] -top-6 -left-6 shadow-[0_30px_90px_rgba(34,211,238,0.3)] z-20"
+                className="absolute w-64 h-80 md:w-72 md:h-[22rem] object-cover rounded-[30px] -top-4 -left-4 shadow-[0_30px_90px_rgba(34,211,238,0.3)] z-20"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 whileHover={{ scale: 1.03 }}
@@ -249,7 +245,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
-          className="grid grid-cols-3 gap-4 mt-24 max-w-md mx-auto md:mx-0"
+          className="grid grid-cols-2 gap-4 mt-24 max-w-md mx-auto md:mx-0"
         >
           {stats.map(({ value, label }) => (
             <div key={label} className="text-center md:text-left">

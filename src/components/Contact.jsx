@@ -26,7 +26,7 @@ const contactInfo = [
   {
     icon: HiLocationMarker,
     label: "Lokasi",
-    value: "Pekanbaru, Riau",
+    value: "Rokan Hulu, Riau",
     href: "#",
     color: "#818cf8",
   },
@@ -49,8 +49,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative py-28 px-6 overflow-hidden">
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-cyan-500/5 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute top-0 left-0 w-80 h-80 bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none" />
+
 
       <div className="max-w-6xl mx-auto">
         {/* LABEL */}
@@ -125,28 +124,7 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* SOCIAL LINKS */}
-            <h4 className="text-sm font-semibold text-gray-400 mb-4 uppercase tracking-widest">
-              Ikuti Saya
-            </h4>
-            <div className="flex gap-3">
-              {[
-                { icon: FaGithub, href: "https://github.com/", label: "GitHub" },
-                { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
-                { icon: FaWhatsapp, href: "https://wa.me/6282268131855", label: "WhatsApp" },
-              ].map(({ icon: Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="w-11 h-11 flex items-center justify-center rounded-xl glass border border-white/8 text-gray-400 hover:text-cyan-400 hover:border-cyan-400/30 transition-all duration-300"
-                >
-                  <Icon size={18} />
-                </a>
-              ))}
-            </div>
+
           </motion.div>
 
           {/* RIGHT — FORM */}

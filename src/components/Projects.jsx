@@ -50,7 +50,7 @@ const projects = [
     category: "Web App",
     tags: ["Laravel", "MySQL", "Vite", "PHP"],
     tagColors: ["#FF2D20", "#00758F", "#646CFF", "#8993be"],
-    live: "https://pustakabahasariau.kemendikdasmen.go.id/penelitian/bertuah/public/",
+    live: "https://pustakabahasariau.kemendikdasmen.go.id/bertuah/",
     year: "2025",
     status: "Live",
     icon: FaBookOpen,
@@ -63,7 +63,7 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="relative py-28 px-6 overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/5 rounded-full blur-[120px] pointer-events-none" />
+
 
       <div className="max-w-6xl mx-auto">
         {/* LABEL */}
