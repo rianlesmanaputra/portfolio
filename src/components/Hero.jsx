@@ -21,7 +21,7 @@ const socials = [
   },
   {
     icon: FaLinkedin,
-    href: "https://linkedin.com/in/rian-lesmana-putra",
+    href: "https://linkedin.com/in/rian-lesmana-putra-931280389",
     label: "LinkedIn",
   },
   {
